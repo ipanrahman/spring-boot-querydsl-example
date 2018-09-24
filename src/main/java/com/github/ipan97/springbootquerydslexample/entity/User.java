@@ -1,5 +1,6 @@
 package com.github.ipan97.springbootquerydslexample.entity;
 
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -8,6 +9,13 @@ import java.io.Serializable;
 /**
  * @author Ipan Taupik Rahman
  */
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@EqualsAndHashCode
+@ToString
 @Entity
 @Table(name = "users")
 public class User implements Serializable {
@@ -16,11 +24,11 @@ public class User implements Serializable {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
-    @Column(name = "firstname", length = 30)
-    private String firstname;
+    @Column(name = "first_name", length = 30)
+    private String firstName;
 
-    @Column(name = "lastname", length = 40)
-    private String lastname;
+    @Column(name = "last_name", length = 40)
+    private String lastName;
 
     @Column(name = "email", length = 30, unique = true)
     private String email;
