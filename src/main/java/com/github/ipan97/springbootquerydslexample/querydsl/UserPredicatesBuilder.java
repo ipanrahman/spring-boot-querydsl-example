@@ -11,8 +11,8 @@ import java.util.List;
 public class UserPredicatesBuilder {
     private List<SearchCriteria> params;
 
-    public UserPredicatesBuilder(List<SearchCriteria> params) {
-        this.params = params;
+    public UserPredicatesBuilder() {
+        this.params = new ArrayList<>();
     }
 
     public UserPredicatesBuilder with(String key, String operation, Object value) {

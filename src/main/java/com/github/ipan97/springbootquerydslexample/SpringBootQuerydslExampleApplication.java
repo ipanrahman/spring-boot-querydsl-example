@@ -21,6 +21,9 @@ public class SpringBootQuerydslExampleApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
+        userRepository.deleteAll();
+
         List<User> users = new ArrayList<>();
         users.add(User.builder()
                 .firstName("John")
