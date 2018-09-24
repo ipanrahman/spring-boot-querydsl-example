@@ -1,0 +1,27 @@
+databaseChangeLog:
+- changeSet:
+    id: users
+    author: ipan97.com
+    changes:
+    - createTable:
+        tableName: users
+        columns:
+        - column:
+            name: id
+            type: VARCHAR(36)
+        - column:
+            name: firstname
+            type: VARCHAR(30)
+        - column:
+            name: lastname
+            type: VARCHAR(40)
+        - column:
+            name: email
+            type: VARCHAR(30)
+        - column:
+            name: age
+            type: INT
+    - addPrimaryKey:
+        tableName: users
+        columnNames: id
+        constraINTName: pk_user_id
