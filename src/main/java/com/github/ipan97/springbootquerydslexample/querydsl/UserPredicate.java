@@ -5,12 +5,14 @@ import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.core.types.dsl.NumberPath;
 import com.querydsl.core.types.dsl.PathBuilder;
 import com.querydsl.core.types.dsl.StringPath;
+import lombok.AllArgsConstructor;
 
 import static org.hibernate.query.criteria.internal.ValueHandlerFactory.isNumeric;
 
 /**
  * @author Ipan Taupik Rahman
  */
+@AllArgsConstructor
 public class UserPredicate {
     private SearchCriteria criteria;
 
